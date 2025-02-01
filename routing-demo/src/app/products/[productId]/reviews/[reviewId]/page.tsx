@@ -9,10 +9,10 @@ const ProductReview = async ({
 }: {
   params: Promise<{ productId: string; reviewId: string }>;
 }) => {
-  const random = getRandomInit(2);
-  if (random === 1) {
-    throw new Error("Error loading review");
-  }
+  // const random = getRandomInit(2);
+  // if (random === 1) {
+  //   throw new Error("Error loading review");
+  // }
   const { productId, reviewId } = await params;
 
   if (parseInt(reviewId) > 1000) {
