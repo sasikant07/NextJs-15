@@ -1,8 +1,9 @@
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
+// import { redirect } from "next/navigation";
 
-function getRandomInit(count: number) {
-  return Math.floor(Math.random() * count);
-}
+// function getRandomInit(count: number) {
+//   return Math.floor(Math.random() * count);
+// }
 
 const ProductReview = async ({
   params,
@@ -16,8 +17,8 @@ const ProductReview = async ({
   const { productId, reviewId } = await params;
 
   if (parseInt(reviewId) > 1000) {
-    // notFound();
-    redirect("/products");
+    notFound();
+    // redirect("/products");
   }
 
   return (
